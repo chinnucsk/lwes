@@ -185,6 +185,10 @@ extern const LWES_BYTE LWES_INT_64_TOKEN;
 extern const LWES_BYTE LWES_BOOLEAN_TOKEN;
 extern const LWES_BYTE LWES_IP_ADDR_TOKEN;
 extern const LWES_BYTE LWES_STRING_TOKEN;
+extern const LWES_BYTE LWES_BYTE_TOKEN;
+extern const LWES_BYTE LWES_FLOAT_TOKEN;
+extern const LWES_BYTE LWES_DOUBLE_TOKEN;
+extern const LWES_BYTE LWES_IPV4_TOKEN;
 
 extern const LWES_SHORT_STRING LWES_UNDEFINED_STRING;
 extern const LWES_SHORT_STRING LWES_U_INT_16_STRING;
@@ -196,21 +200,42 @@ extern const LWES_SHORT_STRING LWES_INT_64_STRING;
 extern const LWES_SHORT_STRING LWES_BOOLEAN_STRING;
 extern const LWES_SHORT_STRING LWES_IP_ADDR_STRING;
 extern const LWES_SHORT_STRING LWES_STRING_STRING;
+extern const LWES_SHORT_STRING LWES_BYTE_STRING;
+extern const LWES_SHORT_STRING LWES_FLOAT_STRING;
+extern const LWES_SHORT_STRING LWES_DOUBLE_STRING;
+extern const LWES_SHORT_STRING LWES_IPV4_STRING;
 
 extern const LWES_SHORT_STRING LWES_META_INFO_STRING;
 
 /*! \enum An enumeration of the types used by lwes */
 typedef enum {
-    LWES_TYPE_U_INT_16  = 1,   /*!< 2 byte unsigned integer type */
-    LWES_TYPE_INT_16    = 2,   /*!< 2 byte signed integer type type */ 
-    LWES_TYPE_U_INT_32  = 3,   /*!< 4 byte unsigned integer type */
-    LWES_TYPE_INT_32    = 4,   /*!< 4 byte signed integer type */
-    LWES_TYPE_STRING    = 5,   /*!< variable bytes string type */
-    LWES_TYPE_IP_ADDR   = 6,   /*!< 4 byte ipv4 address type */
-    LWES_TYPE_INT_64    = 7,   /*!< 8 byte signed integer type */
-    LWES_TYPE_U_INT_64  = 8,   /*!< 8 byte unsigned integer type */
-    LWES_TYPE_BOOLEAN   = 9,   /*!< 1 byte boolean type */
-    LWES_TYPE_UNDEFINED = 255, /*!< undefined type */
+    LWES_TYPE_U_INT_16      = 1,   /*!< 2 byte unsigned integer type */
+    LWES_TYPE_INT_16        = 2,   /*!< 2 byte signed integer type type */ 
+    LWES_TYPE_U_INT_32      = 3,   /*!< 4 byte unsigned integer type */
+    LWES_TYPE_INT_32        = 4,   /*!< 4 byte signed integer type */
+    LWES_TYPE_STRING        = 5,   /*!< variable bytes string type */
+    LWES_TYPE_IP_ADDR       = 6,   /*!< 4 byte ipv4 address type */
+    LWES_TYPE_INT_64        = 7,   /*!< 8 byte signed integer type */
+    LWES_TYPE_U_INT_64      = 8,   /*!< 8 byte unsigned integer type */
+    LWES_TYPE_BOOLEAN       = 9,   /*!< 1 byte boolean type */
+    LWES_TYPE_BYTE          = 10,
+    LWES_TYPE_FLOAT         = 11,
+    LWES_TYPE_DOUBLE        = 12,
+    LWES_TYPE_IPV4          = 13,
+    LWES_TYPE_ARR_U_INT_16  = 129, /* Array versions of above types */
+    LWES_TYPE_ARR_INT_16    = 130,
+    LWES_TYPE_ARR_U_INT_32  = 131,
+    LWES_TYPE_ARR_INT_32    = 132,
+    LWES_TYPE_ARR_STRING    = 133,
+    LWES_TYPE_ARR_IP_ADDR   = 134,
+    LWES_TYPE_ARR_INT_64    = 135,
+    LWES_TYPE_ARR_U_INT_64  = 136,
+    LWES_TYPE_ARR_BOOLEAN   = 137,
+    LWES_TYPE_ARR_BYTE      = 138,
+    LWES_TYPE_ARR_FLOAT     = 139,
+    LWES_TYPE_ARR_DOUBLE    = 140,
+    LWES_TYPE_ARR_IPV4      = 141,
+    LWES_TYPE_UNDEFINED     = 255, /*!< undefined type */
 } LWES_TYPE;
 
 #ifdef __cplusplus
